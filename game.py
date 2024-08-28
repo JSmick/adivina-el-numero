@@ -2,7 +2,7 @@ import random
 import time
 
 number_random = random.randint(1, 100)
-
+trys = 1
 print("Generando numero")
 for i in range(3):
     time.sleep(1)
@@ -15,6 +15,8 @@ while True:
     number_by_user = input("Ingrese un numero del 1 al 100\n---> ")
     if number_by_user == str(number_random):
         print("¡Hurra! Has adivinado el numero")
+        print(f"Tardantes {trys} intentos en hallar el numero!")
         break
     else:
         print("Intentelo de nuevo\n\n")
+        trys += 1
